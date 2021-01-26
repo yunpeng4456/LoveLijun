@@ -2,9 +2,9 @@
     <div class="wrapper">
 
         <div>
-            <img :src="origin+'/avatar1.jpg'" style="width: 60px; border-radius: 50%;">
-            <img :src="origin+'/z.webp'"/>
-            <img :src="origin+'/avatar2.jpg'" style="width: 60px; border-radius: 50%;">
+            <img :src="origin+'/lovelijun/avatar1.jpg'" style="width: 60px; border-radius: 50%;">
+            <img :src="origin+'/lovelijun/z.webp'"/>
+            <img :src="origin+'/lovelijun/avatar2.jpg'" style="width: 60px; border-radius: 50%;">
         </div>
     </div>
 </template>
