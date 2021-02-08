@@ -7,7 +7,7 @@
             <img :src="origin+'/lovelijun/avatar2.jpg'" style="width: 60px; border-radius: 50%;">
         </div>
         <div class="love-time">
-            <h2>我们相恋了<span style="color:red;">❤️</span></h2>️
+            <div><h2>我们相恋了<span style="color:red;">❤</span></h2></div>
             <div class="timer">
                 <b>
                     {{days}}
@@ -25,7 +25,7 @@
                     {{seconds}}
                 </b>
                 Seconds
-                
+
             </div>
         </div>
     </div>
@@ -45,19 +45,19 @@
                 minutes:0,
                 hours:0,
                 seconds:0
-                
+
             };
         },
 
         created() {
-            console.log()
+            this.calcTime();
         },
         mounted() {
-           
-            
+
+
             this.interval = setInterval(this.calcTime,1000);
-            
-            
+
+
         },
         computed: {
 
@@ -71,19 +71,19 @@
             //
             calcTime(){
                 let t1= moment('2020-12-25 20:00:00');
-                
+
                 let t2 = moment();
-                
+
                 //计算时间差并转换成标准时间单位
-                
+
                 let dura = t2.format('x') - t1.format('x');
-                
+
                 let tempTime = moment.duration(dura);
                 this.days = t2.diff(t1, 'day')
                 this.hours = t2.diff(t1, 'hour')%24;
                 this.minutes = t2.diff(t1, 'minute')%60;
                 this.seconds = t2.diff(t1, 'second')%60;
-                
+
             }
 
 
@@ -115,14 +115,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
     }
     .timer{
         font-size: 180%;
         line-height: 1.5;
         b{
             color:rgb(253, 99, 125);
-        }   
+        }
     }
 
 </style>
