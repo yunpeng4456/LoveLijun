@@ -32,10 +32,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: clean node_modules
-        run: rm -rf ./node_modules
-      - name: build
-        run: rm -rf pnpm-lock.yaml
       - name: install npm
         uses: pnpm/action-setup@v2
         with:
