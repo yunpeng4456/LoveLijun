@@ -17,7 +17,7 @@
     }
 </script>
 
-<style lang="scss">
+<style>
     #app {
         width: 100%;
         height: 280px;

@@ -35,11 +35,11 @@ jobs:
       - name: install npm
         uses: pnpm/action-setup@v2
         with:
-          version: 7.0.0
+          version: 7.9.0
       - name: install dependencies
         run: pnpm install
       - name: restore cache node_modules
-        id: node modules cache id
+        id: node_modules_cache_id
         uses: actions/cache@v3
         with:
           path: node modules

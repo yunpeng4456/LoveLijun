@@ -93,7 +93,7 @@
     };
 </script>
 
-<style lang="scss">
+<style>
     body{
         -webkit-font-smoothing: antialiased;
         font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
@@ -115,9 +115,11 @@
     .timer{
         font-size: 180%;
         line-height: 1.5;
-        b{
-            color:rgb(253, 99, 125);
-        }
+
+    }
+
+    .timer  b{
+      color:rgb(253, 99, 125);
     }
 
 </style>
