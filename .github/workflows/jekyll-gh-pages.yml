@@ -43,7 +43,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node modules
-          key: $f runner.os 1}-$f hashFiles( package.json') 1]-node modules
+          key: ${{runner.os }}-${{ hashFiles( 'package.json') }}-node_modules
       - name: build
         run: pnpm build
       - name: upload build artfacts
