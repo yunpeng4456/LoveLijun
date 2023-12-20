@@ -74,9 +74,6 @@
 
                 //计算时间差并转换成标准时间单位
 
-                let dura = t2.format('x') - t1.format('x');
-
-                let tempTime = moment.duration(dura);
                 this.days = t2.diff(t1, 'day')
                 this.hours = t2.diff(t1, 'hour')%24;
                 this.minutes = t2.diff(t1, 'minute')%60;
