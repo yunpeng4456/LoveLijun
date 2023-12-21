@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react';
+// @ts-nocheck
+
+import {  useRef } from 'react';
 import Script from 'next/script'
 
 
@@ -13,6 +15,7 @@ export default () => {
 		if (onloadCount.current < 2) {
 			return;
 		}
+
 		MorphSVGPlugin.convertToPath("polygon");
 		var xmlns="http://www.w3.org/2000/svg",xlinkns="http://www.w3.org/1999/xlink";
 		var select=function(a){return document.querySelector(a)};

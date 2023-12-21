@@ -1,0 +1,32 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]  # 可以指定多个 Node.js 版本
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - run: npm install
+      - run: npm run build --if-present
+      - name: upload production artifacts
+          uses: actions/upload-pages-artifact@v1
+          with:
+            path: out
+      - name: Deploy Page To Release
+          id: deployment
+          uses: actions/deploy-pages@v1
