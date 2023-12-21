@@ -53,9 +53,9 @@ export default function Home() {
       <div className={ styles.wrapper }>
 
         <div>
-          <img src="/avatar1.jpg" style={ { width: 60, borderRadius: '50%' } } alt={'avatar image'}/>
-          <img src="/z.webp" alt={'love gif'}/>
-          <img src="/avatar2.jpg" style={ { width: 60, borderRadius: '50%' } }  alt={'avatar image'}/>
+          <img src="avatar1.jpg" style={ { width: 60, borderRadius: '50%' } } alt={'avatar image'}/>
+          <img src="z.webp" alt={'love gif'}/>
+          <img src="avatar2.jpg" style={ { width: 60, borderRadius: '50%' } }  alt={'avatar image'}/>
         </div>
         <div className={ styles['love-time'] } >
           <div><h2>我们相恋了<span style={ { color: 'red' } }>❤</span></h2></div>
